@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class DeadliftPlates {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the weight of the barbell (in kg): ");
+        int barWeight = scanner.nextInt();
+        System.out.print("Enter the weight you want to deadlift (in kg): ");
+        int totalWeight = scanner.nextInt();
+        int weightToLift = totalWeight - barWeight;
+        int plateWeight = 20; // each plate weighs 20kg
+        int platesPerSide = weightToLift / (2 * plateWeight);
+        System.out.println("You need to load " + platesPerSide + " plates on each side of the bar.");
+    }
+}
